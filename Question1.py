@@ -1,13 +1,15 @@
-# Interactive Approach
-    # Straightforward implementation and easy to understand
-    # May not be efficient for large valuers due to the loop interaction
-    # Constant memory usage
+"""Calculate the sum of numbers from 1 to n."""
 
-def sum():
-    number = int(input("Choose n = "))
-    for x in range(1, number):  # Loop through numbers from 1 to number
-        number += x  # Add each number to the total
-    print(f"The sum is: {number}")  
+# Interactive Approach
+     # Straightforward implementation and easy to understand
+     # May not be efficient for large valuers due to the loop interaction
+     # Constant memory usage 
+
+def calculate_sum():
+    n = int(input("Choose n = "))
+    for number in range(1, n): 
+        n += number  # Add each number to the total
+    print(f"The sum is: {n}")  
 
 
 # Recursive Approach
@@ -15,13 +17,13 @@ def sum():
     # May encounter stack overflow for very large values
     # Adds clarity and reduces the time needed to write
     
-def recursiveSum(n):
+def calculate_recursive_sum(n):
     if n == 1:  # Base case: if n is 1, return 1
         return 1
     else:
         return n + recursiveSum(n - 1)  # Return n plus the sum of integers from 1 to n-1 recursively
-
-# number = int(input("Choose n = "))
+# uncomment the following
+# n = int(input("Choose n = "))
 # Call the recursive function and print the result
 # print("The sum is:", recursiveSum(number))
 
@@ -31,10 +33,10 @@ def recursiveSum(n):
     # No memory overhead
     # Requires knowledge in math to understand the formula and whats been applied
 
-def mathSum():
+def calculate_math_sum():
     n = int(input("Choose n = ")) # user input
     result = (n * (n + 1)) / 2 # mathematical formula
-    print(result) # print result
+    print(result) 
 
 # mathSum()
     
